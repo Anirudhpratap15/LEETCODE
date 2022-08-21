@@ -8,9 +8,9 @@ public class Solution extends VersionControl {
         int end = n;
         int ans = 0 ;
         
-        if(isBadVersion(1)){
-            return 1;
-        }
+        // if(isBadVersion(1)){
+        //     return 1;
+        // }
         
         while(end>start){
             int mid = start+(end - start)/2;
