@@ -12,10 +12,6 @@ public class Solution extends GuessGame {
         
         int start = 1 ;
         int end  = n  ;
-        int  ans  = 0 ;
-        if (n ==1||n==0){
-            return n;
-        }
         while (end >=start){
 
             int   mid  = start +(end - start)/2;
