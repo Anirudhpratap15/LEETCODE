@@ -12,7 +12,8 @@ class Solution {
 
 
             }
-        if(end == -1 ) return k;
-        return arr[end] + (k-(arr[end]-(end+1)));
+        //if(end == -1 ) return k;
+      //  return arr[end] + (k-(arr[end]-(end+1)));
+        return k +start ;
 }
 }
