@@ -11,8 +11,6 @@ class Solution {
             }
             if(matrix[r][c]<target){
               r= r+1 ; 
-                // if(r<matrix.length){
-                //     c= matrix[r].length-1;
                 }
             
             else c = c-1;
