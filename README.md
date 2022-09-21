@@ -1,2 +1,2 @@
 # LEETCODE
-Collection of LeetCode questions I have done and learning DATA-STRUCTURE & ALGORITHM
+Collection of LeetCode questions I have done and Documenting  DATA-STRUCTURE & ALGORITHM
