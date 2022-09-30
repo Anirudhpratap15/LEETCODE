@@ -29,11 +29,18 @@ class Solution {
 	            if (sum == 0)
 	            {
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    
+                    //when left pointer have dublicate value skip ++
+                      while(left<right&&nums[left]==nums[left+1]) left++;
+                   
+                    //when right pointer have dublicate value skip --
+                      while(left<right&&nums[right]==nums[right-1]) right--;
+
                     left++;
                     right--;
 	            }
                 //see point 1
-	            else if (sum < 0)
+	            else if(sum < 0)
 	                left++;
                 // see point 2
 	            else 													
