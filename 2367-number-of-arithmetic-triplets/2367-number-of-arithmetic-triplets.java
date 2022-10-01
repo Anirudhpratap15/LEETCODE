@@ -31,7 +31,7 @@ class Solution {
                 // if j-i is smaller than diff as array is sorted we need to move forward to increase the j-i value 
                 else if(c<diff) left++;
                  // if k-j is smaller than diff as array is sorted we need to move forward to increase the k-j value 
-                  else if(d<diff) left++;
+                 // else if(d<diff) left++;
                 //when j-i and  k-j  is greater  move backward
                 else right-- ;
             }
