@@ -1,7 +1,9 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int p = 1;
+        //checking array if have any zero 
           int isContainZero  = 0;
+        // find product of all element in array but if contain 0 as element then product will be 0 to avoid this when 0 encounter multiply by 1 ;
       for(int x  : nums){
           if(x==0){
              isContainZero+=1;
