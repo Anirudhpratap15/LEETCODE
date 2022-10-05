@@ -16,7 +16,7 @@ class Solution {
         }
         
         int p = 1 ;
-        // multiply leftIndexProduct to right index product which is store in p ;
+        // multiply leftIndexProduct to right index product which is store in p as we have done for leftProduct array here we do not use new array for that  ;
           for(int i = nums.length-1 ;i>=0;i--){
             
             ans[i] =  p * leftProduct[i];
