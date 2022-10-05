@@ -1,30 +1,27 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-        int p = 1;
-        //checking array if have any zero 
-          int isContainZero  = 0;
-        // find product of all element in array but if contain 0 as element then product will be 0 to avoid this when 0 encounter multiply by 1 ;
-      for(int x  : nums){
-          if(x==0){
-             isContainZero+=1;
-              p = p*1;
-          }
-          else p = p*x;
-      }
         
-        for(int i = 0 ;i<nums.length;i++){
-            if(isContainZero == 0){
-                 nums[i] = p/nums[i];
-            }
-           else if(isContainZero == 1&&nums[i]==0){
-                 nums[i] = p;
-            }
-            else if(isContainZero == 1&&nums[i]!=0){
-                 nums[i] = 0;
-            }
-            else nums[i] = 0;
+        int[] ans = new int[nums.length];
+        
+        int[] leftProduct = new int[nums.length];
+          int[] rightProduct = new int[nums.length];
+        
+         leftProduct[0] = 1 ;
+          rightProduct[nums.length-1] = 1 ;
+        
+        for(int i = 1 ;i < nums.length;i++){
+            leftProduct[i] =  leftProduct[i-1]* nums[i-1];
         }
-        return nums ; 
-    
-
-}}
+        
+          
+        for(int i = nums.length-2 ;i>=0;i--){
+            rightProduct[i] =  rightProduct[i+1]* nums[i+1];
+        }
+        
+          for(int i = 0 ;i < nums.length;i++){
+            ans[i] =  rightProduct[i]*  leftProduct[i];
+        }
+        return ans ;
+        
+    }
+}
