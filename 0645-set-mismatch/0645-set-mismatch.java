@@ -2,7 +2,8 @@ class Solution {
     public int[] findErrorNums(int[] nums) {
         int[] ans = new int[2];
         
-        int i = 0 ; 
+        int i = 0 ;
+        //sorting using cycle sort
         while(i<nums.length){
             int correctIndex  = nums[i]-1;
             if(nums[i]!=nums[correctIndex]){
@@ -12,9 +13,12 @@ class Solution {
         
         }
 
+        //finding duplicate and missing number
         for(int j = 0 ; j<nums.length;j++){
             if(nums[j]!=j+1){
+                //duplicate number
                 ans[0]= nums[j];
+                //missing number
                 ans[1]= j+1;
                 
             }
