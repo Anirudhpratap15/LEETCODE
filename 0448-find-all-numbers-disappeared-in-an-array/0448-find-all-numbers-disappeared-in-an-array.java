@@ -19,12 +19,7 @@ class Solution {
                 ans.add(j+1);
             }
         }
-        if(ans.size() == 0){
-           return ans ;
-        }
-        else {
             return ans;
-        }
         
     }
      private  void swap(int x, int y,int [] nums) {
