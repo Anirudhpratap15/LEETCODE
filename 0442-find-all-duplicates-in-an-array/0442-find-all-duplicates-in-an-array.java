@@ -2,6 +2,7 @@ class Solution {
     public List<Integer> findDuplicates(int[] nums) {
          int i =  0 ;
         List<Integer> ans = new ArrayList<>();
+        // sorting using cycle sort
         while(i < nums.length){
             int correctIndex =  nums[i]-1;
             if(nums[i]!=nums[correctIndex]){
@@ -12,6 +13,7 @@ class Solution {
             }
         }
         
+        //finding missing elements
          for(int j = 0 ; j <nums.length;j++){
             if(nums[j]!=j+1){
                 ans.add(nums[j]);
