@@ -1,17 +1,21 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        // taking first string as prefix
-        String prefix = strs[0];
         
-        // now from 2nd string from array compare prefix 
-        for(int i = 1 ; i<strs.length;i++){
-            // if prefix found it will give 0 if not found -1 
-           while(strs[i].indexOf(prefix)!=0){
-               // when string is not matching them remove one char from last of prefix
-               prefix = prefix.substring(0,prefix.length()-1);
-           }
+       StringBuilder ans = new StringBuilder();
+        //sorting array
+        Arrays.sort(strs);
+        
+        //storing first and last string in char array 
+        char[] first = strs[0].toCharArray();
+        char[] last = strs[strs.length-1].toCharArray();
+        
+        //comparing fisrt and last char array from index 0 if matched then stored in ans 
+        for(int i = 0 ;i<first.length;i++){
+            if(first[i]!=last[i]){
+                break;
+            }
+            else ans.append(first[i]);
         }
-        return prefix ;
-        
+        return ans.toString();
     }
 }
