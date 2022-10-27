@@ -14,7 +14,8 @@ class Solution {
         // traverse both string from last   add last number from both string strore carry and append value in string 
         while(i>=0||j>=0||carry!=0){
             
-            int x = i >= 0 ? num1.charAt(i) - '0' :  0 ;
+            int x = i >= 0 ? num1.charAt(i) - '0' :  0 ;  
+// num1.charAt(i) - '0'  why ? --> ascii code of 0 is 48 so substracting from 49-48 =1 gives orginal number of that string 
             int y = j >= 0 ? num2.charAt(j) - '0' :  0 ;
             i--;
             j--;
