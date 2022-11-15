@@ -1,6 +1,5 @@
 class Solution {
     public int numberOfSteps(int num) {
-        int count =0 ;
         
 //         while(num>0){
             
@@ -16,17 +15,12 @@ class Solution {
 //         return count  ;
         
         if(num==0){
-            return count ;
+            return 0 ;
         }
         
        else  if(num%2==0){
-             count = count +1;
            return (numberOfSteps(num/2)+1);
         }
-        
-        // else if {
-        count = count +1;
              return (numberOfSteps(num-1)+1);}
-        // }
         
     }
