@@ -1,29 +1,28 @@
 class Solution {
     public boolean halvesAreAlike(String s) {
-        int  leftCount = 0 ;
-          int  rightCount = 0 ;
         
-        for(int i = 0 ;i<s.length()/2;i++){
-                   if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u' || s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I'||s.charAt(i) == 'O'||s.charAt(i) == 'U') {
-
-                leftCount = leftCount+1 ;
-            }
+        //stroring vowels in set 
+        Set<Character> set = Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
+        //storing count 
+        int ans = 0 ;
+        
+        int j = s.length()/2;
+        // for loop till half of the array 
+        for(int i = 0 ; i <s.length()/2;i++){
             
+            //checking first half array 
+            if(set.contains(s.charAt(i))) ans++ ;
+                //checking second  half array 
+            if(set.contains(s.charAt(j+i))) ans--;
         }
         
-        for(int j = s.length()/2 ;j<s.length();j++){
-            if (s.charAt(j) == 'a' || s.charAt(j) == 'e' || s.charAt(j) == 'i' || s.charAt(j) == 'o' || s.charAt(j) == 'u' || s.charAt(j) == 'A' || s.charAt(j) == 'E' || s.charAt(j) == 'I'||s.charAt(j) == 'O'||s.charAt(j) == 'U'){
-                rightCount = rightCount+1 ;
-            }
-            
+        // count 0 because in for loop we are decreasing the count if we get vowels in second half 
+        if(ans == 0 ){ 
+            return true ; 
         }
-        
-        if(leftCount==rightCount){
-            return true ;
-        }
-        
         return false  ;
         
-    }
         
+        
+    }
 }
